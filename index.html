@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Happy Birthday Meri Jaan ❤️ | A Special Love Surprise for My Wife</title>
+    <meta name="description" content="A romantic interactive birthday celebration with Bubu & Dudu, cherished memories, poetry, and endless love.">
+    <meta name="theme-color" content="#ff758c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- WhatsApp & Social Media Preview Cards (OpenGraph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Happy Birthday Meri Jaan ❤️ | A Special Surprise for My Wife">
+    <meta property="og:description" content="🌸 Tap to open a special 12:00 AM birthday celebration, our love story, memories & sweet wishes! 🎂💖">
+    <meta property="og:image" content="assets/both.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Happy Birthday Meri Jaan ❤️">
+    <meta property="twitter:description" content="A romantic interactive birthday surprise with Bubu & Dudu 🎂✨">
+    <meta property="twitter:image" content="assets/both.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+    
+    <!-- Google Fonts: Editorial Serif + Urdu Calligraphy + Soft Rounded Sans + Handwritten Accent -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@500;700&family=Gulzar&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas for Floating Hearts, Sparkles & Confetti Burst -->
+    <canvas id="magic-canvas" aria-hidden="true"></canvas>
+
+    <!-- Background Ambient Glow Orbs -->
+    <div class="ambient-glow glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow glow-2" aria-hidden="true"></div>
+    <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+    <!-- 1. LOADING SCREEN -->
+    <div id="loading-screen" class="loading-screen" role="status" aria-live="polite">
+        <div class="loading-content">
+            <div class="bubu-dudu-loader">
+                <img src="assets/both.jpg" alt="Bubu and Dudu Hugging" class="loader-avatar-img">
+                <div class="sparkle-ring"></div>
+            </div>
+            <p class="loading-text">Preparing something special for my Jaan... <span class="loading-heart">❤️</span></p>
+            <div class="loading-bar-track">
+                <div class="loading-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING MUSIC CONTROLLER -->
+    <aside class="music-controller" aria-label="Audio player">
+        <button id="music-toggle-btn" class="music-btn" aria-label="Toggle background music" title="Play / Pause Music">
+            <span class="music-icon" id="music-icon">🎵</span>
+            <div class="equalizer-bars" id="equalizer" aria-hidden="true">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+        <audio id="birthday-audio" preload="auto" loop></audio>
+    </aside>
+
+    <!-- DESKTOP SIDE NAVIGATION DOTS -->
+    <nav class="side-nav-dots" id="side-nav" aria-label="Page navigation">
+        <button class="nav-dot active" data-target="opening-scene" aria-label="Opening Scene" title="12:00 AM Cake Celebration">
+            <span class="dot-tooltip">12:00 AM Celebration</span>
+        </button>
+        <button class="nav-dot" data-target="memory-1" aria-label="Part 1" title="The Sweetest Part">
+            <span class="dot-tooltip">Sweetest Part 🤤</span>
+        </button>
+        <button class="nav-dot" data-target="memory-2" aria-label="Part 2" title="Magical Moments">
+            <span class="dot-tooltip">Magical Moments 🎶</span>
+        </button>
+        <button class="nav-dot" data-target="memory-3" aria-label="Part 3" title="Safe Place & Home">
+            <span class="dot-tooltip">Safe Place & Home ☕</span>
+        </button>
+        <button class="nav-dot" data-target="memory-4" aria-label="Part 4" title="Forever & Ever">
+            <span class="dot-tooltip">Forever & Ever 💍</span>
+        </button>
+        <button class="nav-dot" data-target="my-everything" aria-label="My Everything" title="25 Romantic Nicknames">
+            <span class="dot-tooltip">My Everything</span>
+        </button>
+        <button class="nav-dot" data-target="poetry-sanctuary" aria-label="Poetry Sanctuary" title="Urdu Shayari & Duas">
+            <span class="dot-tooltip">Urdu Shayari</span>
+        </button>
+        <button class="nav-dot" data-target="love-letter-section" aria-label="Love Letter" title="Wax-Sealed Love Letter">
+            <span class="dot-tooltip">Love Letter</span>
+        </button>
+        <button class="nav-dot" data-target="final-scene" aria-label="Forever Sunset" title="Forever Sunset & Lifetime Promise">
+            <span class="dot-tooltip">Forever Sunset</span>
+        </button>
+    </nav>
+
+    <!-- MAIN INTERACTIVE CONTAINER -->
+    <main class="story-wrapper" id="main-content">
+
+        <!-- ============================================== -->
+        <!-- SCENE 1: OPENING & 12:00 AM CAKE CELEBRATION -->
+        <!-- ============================================== -->
+        <section id="opening-scene" class="scene-section opening-section">
+            
+            <!-- Sparkle Accents -->
+            <div class="scene-sparkles" aria-hidden="true">
+                <span class="star-float star-1">✨</span>
+                <span class="star-float star-2">💖</span>
+                <span class="star-float star-3">✨</span>
+                <span class="star-float star-4">🌸</span>
+                <span class="star-float star-5">✨</span>
+                <span class="star-float star-6">🧸</span>
+            </div>
+
+            <!-- Top Midnight Announcement Banner -->
+            <div class="midnight-ribbon" id="midnight-ribbon">
+                <span class="ribbon-glow">🌙 Special Day, Special Feelings 🩷🦋</span>
+                <p class="ribbon-sub">"🌸✨ Wow! 🥳🥂 The Most Awaited Moment Is Here 🎉⏳ ✨🌸"</p>
+            </div>
+
+            <!-- Header Titles & Reveal Area -->
+            <header class="opening-header">
+                <!-- Hint shown before cake is tapped -->
+                <div class="tap-hint-pill" id="cake-hint">
+                    <span class="sparkle-spin">✨</span>
+                    <span class="hint-text">Tap the cake to make a wish & cut it <span class="hint-heart">❤️</span></span>
+                    <span class="sparkle-spin">✨</span>
+                </div>
+
+                <!-- Birthday Banner Revealed upon Cake Click -->
+                <div class="birthday-banner hidden" id="birthday-banner" aria-live="polite">
+                    <div class="banner-badge">Yesss! It's 12:00 AM 🥳🎂</div>
+                    <h1 class="birthday-heading" id="birthday-heading">
+                        <span class="heading-line-1">Happiest Birthday</span>
+                        <span class="heading-line-2 wife-name-text" id="wife-name-display">Mari Shehzadi</span>
+                        <span class="heading-heart">❤️🔥</span>
+                    </h1>
+                    <div class="love-box-frame">
+                        <span class="love-box-text">╭═════════💜═╮ 🇮 🇱 🇴 🇻 🇪 🇾 🇴 🇺 ╰═💜═════════╯</span>
+                    </div>
+                    <p class="birthday-tagline" id="birthday-tagline">Cuz! Today Is My Love’s Birthday 🎁🎉🥂</p>
+                </div>
+            </header>
+
+            <!-- Interactive Stage: Bubu (Panda) + Cake + Dudu (Bear) -->
+            <div class="stage-container" id="stage-container">
+                
+                <!-- Left: Bubu Character Card -->
+                <div class="character-wrapper bubu-wrapper" id="bubu-character" role="button" tabindex="0" aria-label="Bubu Panda Character - Click to interact">
+                    <div class="character-speech-bubble" id="bubu-bubble">Love you so much baby! 💖</div>
+                    <div class="character-figure bubu-figure">
+                        <div class="character-img-frame">
+                            <img src="assets/bubu.jpg" alt="Bubu Panda" class="character-custom-img bubu-img">
+                            <div class="character-party-hat">🎉</div>
+                            <!-- Bubu's Animated Birthday Cake Knife -->
+                            <div class="bubu-knife" id="bubu-knife" aria-hidden="true">
+                                <span class="knife-emoji">🗡️</span>
+                                <span class="knife-sparkle">✨</span>
+                            </div>
+                        </div>
+                        <div class="character-name-tag">Bubu 🐼❤️</div>
+                    </div>
+                </div>
+
+                <!-- Center: 2-lb Chocolate Fudge Birthday Cake (Clickable) -->
+                <div class="cake-stage-wrapper" id="cake-interactive-area">
+                    
+                    <!-- Cake Glow Halo -->
+                    <div class="cake-glow-halo" id="cake-glow"></div>
+
+                    <!-- Visual Laser / Sparkle Slicing Lines during Bubu Cut -->
+                    <div class="cake-cutting-effects" id="cutting-effects" aria-hidden="true">
+                        <div class="cut-slash slash-vertical" id="cut-slash-v"></div>
+                        <div class="cut-slash slash-horizontal" id="cut-slash-h"></div>
+                    </div>
+
+                    <!-- Main Intact Cake -->
+                    <button class="cake-clickable-btn" id="cake-main-btn" aria-label="Birthday cake. Tap to celebrate and cut into chapters!" tabindex="0">
+                        <div class="cake-3d-box" id="cake-3d-box">
+                            
+                            <!-- Birthday Candle on top -->
+                            <div class="cake-candle-top" id="cake-candle">
+                                <div class="flame-wrapper" id="candle-flame">
+                                    <div class="flame-glow"></div>
+                                    <div class="flame-core"></div>
+                                    <div class="smoke-puff" id="smoke-puff"></div>
+                                </div>
+                                <div class="candle-stick"></div>
+                            </div>
+
+                            <!-- Vector SVG 2-Pound Chocolate Fudge Cake with Strawberries & Ganache -->
+                            <svg class="cake-svg" viewBox="0 0 280 240" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="gold-stand" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#d4af37"/>
+                                        <stop offset="50%" stop-color="#fff2c2"/>
+                                        <stop offset="100%" stop-color="#b38f2a"/>
+                                    </linearGradient>
+                                    <linearGradient id="choc-fudge" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#4a2517"/>
+                                        <stop offset="60%" stop-color="#361a0f"/>
+                                        <stop offset="100%" stop-color="#241109"/>
+                                    </linearGradient>
+                                    <linearGradient id="cream-icing" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffffff"/>
+                                        <stop offset="100%" stop-color="#fceddb"/>
+                                    </linearGradient>
+                                    <linearGradient id="ganache-glaze" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#5c301e"/>
+                                        <stop offset="40%" stop-color="#3d1e13"/>
+                                        <stop offset="100%" stop-color="#2a130b"/>
+                                    </linearGradient>
+                                    <radialGradient id="berry-grad" cx="40%" cy="30%" r="70%">
+                                        <stop offset="0%" stop-color="#ff4d6d"/>
+                                        <stop offset="70%" stop-color="#c9184a"/>
+                                        <stop offset="100%" stop-color="#800f2f"/>
+                                    </radialGradient>
+                                </defs>
+
+                                <!-- Plate Stand Base -->
+                                <ellipse cx="140" cy="225" rx="100" ry="12" fill="url(#gold-stand)"/>
+                                <path d="M125 220 L130 205 L150 205 L155 220 Z" fill="url(#gold-stand)"/>
+                                <ellipse cx="140" cy="205" rx="115" ry="16" fill="url(#gold-stand)"/>
+
+                                <!-- Bottom Chocolate Tier (2-lb round) -->
+                                <g class="cake-tier-base">
+                                    <path d="M40 145 C40 190 240 190 240 145 L240 190 C240 220 40 220 40 190 Z" fill="url(#choc-fudge)"/>
+                                    <ellipse cx="140" cy="165" rx="98" ry="10" fill="url(#cream-icing)" opacity="0.8"/>
+                                    <path d="M40 145 C40 175 240 175 240 145 L240 155 C240 185 40 185 40 155 Z" fill="url(#ganache-glaze)"/>
+                                </g>
+
+                                <!-- Top Tier & Ganache Drips -->
+                                <g class="cake-tier-top">
+                                    <path d="M45 105 C45 140 235 140 235 105 L235 145 C235 175 45 175 45 145 Z" fill="url(#choc-fudge)"/>
+                                    <ellipse cx="140" cy="105" rx="95" ry="30" fill="url(#ganache-glaze)"/>
+                                    <ellipse cx="140" cy="102" rx="90" ry="27" fill="#442114"/>
+
+                                    <!-- Luscious Chocolate Ganache Drips -->
+                                    <path d="M45 108 
+                                             Q55 128 62 128 Q70 128 75 112 
+                                             Q85 142 95 142 Q105 142 110 114 
+                                             Q122 135 132 135 Q142 135 148 115 
+                                             Q160 148 172 148 Q182 148 188 114 
+                                             Q198 132 208 132 Q218 132 225 110 
+                                             L235 108 C235 130 45 130 45 108 Z" 
+                                          fill="url(#ganache-glaze)"/>
+
+                                    <!-- Top Whipped Cream Rosettes -->
+                                    <g class="whipped-creams">
+                                        <ellipse cx="70" cy="98" rx="14" ry="10" fill="url(#cream-icing)"/>
+                                        <ellipse cx="105" cy="90" rx="14" ry="10" fill="url(#cream-icing)"/>
+                                        <ellipse cx="140" cy="85" rx="16" ry="11" fill="url(#cream-icing)"/>
+                                        <ellipse cx="175" cy="90" rx="14" ry="10" fill="url(#cream-icing)"/>
+                                        <ellipse cx="210" cy="98" rx="14" ry="10" fill="url(#cream-icing)"/>
+                                    </g>
+
+                                    <!-- Strawberries on Top -->
+                                    <g class="strawberries">
+                                        <g transform="translate(85, 78) rotate(-10)">
+                                            <path d="M12 0 C18 0 24 10 20 22 C16 30 12 32 10 32 C8 32 4 30 0 22 C-4 10 2 0 12 0 Z" fill="url(#berry-grad)"/>
+                                            <path d="M7 2 Q10 -3 13 2 Q16 -4 18 2" fill="none" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/>
+                                            <circle cx="8" cy="14" r="0.8" fill="#ffd166"/>
+                                            <circle cx="14" cy="18" r="0.8" fill="#ffd166"/>
+                                        </g>
+                                        <g transform="translate(130, 70) rotate(5)">
+                                            <path d="M14 0 C22 0 28 12 24 26 C20 34 14 36 12 36 C10 36 4 34 0 26 C-4 12 4 0 14 0 Z" fill="url(#berry-grad)"/>
+                                            <path d="M8 2 Q12 -4 16 2 Q20 -5 22 2" fill="none" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/>
+                                            <circle cx="10" cy="16" r="0.9" fill="#ffd166"/>
+                                            <circle cx="18" cy="19" r="0.9" fill="#ffd166"/>
+                                        </g>
+                                        <g transform="translate(175, 78) rotate(15)">
+                                            <path d="M12 0 C18 0 24 10 20 22 C16 30 12 32 10 32 C8 32 4 30 0 22 C-4 10 2 0 12 0 Z" fill="url(#berry-grad)"/>
+                                            <path d="M7 2 Q10 -3 13 2 Q16 -4 18 2" fill="none" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/>
+                                            <circle cx="8" cy="14" r="0.8" fill="#ffd166"/>
+                                            <circle cx="14" cy="18" r="0.8" fill="#ffd166"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+
+                    <!-- CAKE SPLIT: 4 REALISTIC 3D CHOCOLATE CAKE SLICES (2 in Line 1, 2 in Line 2) -->
+                    <div class="realistic-slices-container hidden" id="split-cake-grid" aria-label="Four slices of birthday cake representing four story chapters">
+                        
+                        <!-- Slice 1: Top-Left (Line 1, Col 1) -->
+                        <button class="realistic-cake-slice slice-tl" data-chapter="memory-1" id="cake-piece-1" aria-label="Cake Slice 1: The Sweetest Part">
+                            <div class="slice-svg-box">
+                                <svg class="slice-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="choc-sp-1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#5a2f1b"/>
+                                            <stop offset="100%" stop-color="#3b1c0e"/>
+                                        </linearGradient>
+                                        <linearGradient id="cream-fill-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#ffffff"/>
+                                            <stop offset="100%" stop-color="#fae4d0"/>
+                                        </linearGradient>
+                                        <linearGradient id="ganache-top-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#4a2517"/>
+                                            <stop offset="50%" stop-color="#33180e"/>
+                                            <stop offset="100%" stop-color="#220e06"/>
+                                        </linearGradient>
+                                        <radialGradient id="strawb-1" cx="35%" cy="30%" r="70%">
+                                            <stop offset="0%" stop-color="#ff4d6d"/>
+                                            <stop offset="65%" stop-color="#c9184a"/>
+                                            <stop offset="100%" stop-color="#800f2f"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <!-- Slice Shadow -->
+                                    <ellipse cx="78" cy="142" rx="55" ry="12" fill="rgba(40,15,25,0.3)"/>
+                                    <!-- Inner Cut Face Layers -->
+                                    <polygon points="25,85 80,55 80,125 25,135" fill="url(#choc-sp-1)"/>
+                                    <polygon points="25,118 80,108 80,114 25,124" fill="url(#cream-fill-1)"/>
+                                    <polygon points="25,102 80,92 80,108 25,118" fill="#462415"/>
+                                    <polygon points="25,97 80,87 80,93 25,103" fill="url(#cream-fill-1)"/>
+                                    <polygon points="25,85 80,55 80,87 25,97" fill="url(#choc-sp-1)"/>
+                                    <!-- Curved Outer Crust -->
+                                    <path d="M80,55 Q115,62 135,80 L135,130 Q115,145 80,125 Z" fill="url(#ganache-top-1)"/>
+                                    <!-- Ganache Drips -->
+                                    <path d="M80,55 Q95,68 100,75 Q105,75 110,65 Q120,78 125,78 Q130,78 135,80 L135,88 Q128,88 122,82 Q115,95 105,95 Q98,95 95,78 Q88,85 80,72 Z" fill="#220e06"/>
+                                    <!-- Top Surface Ganache -->
+                                    <path d="M80,55 L25,85 Q80,105 135,80 Z" fill="url(#ganache-top-1)"/>
+                                    <path d="M78,58 L33,83 Q78,98 125,80 Q78,72 78,58 Z" fill="rgba(255,255,255,0.12)"/>
+                                    <!-- Cream Swirl -->
+                                    <ellipse cx="80" cy="78" rx="14" ry="9" fill="#ffffff"/>
+                                    <ellipse cx="80" cy="76" rx="11" ry="7" fill="#fdf2e9"/>
+                                    <!-- Strawberry -->
+                                    <g transform="translate(80, 68)">
+                                        <path d="M0,-14 C7,-14 12,-6 10,4 C8,10 0,14 -1,14 C-2,14 -10,10 -12,4 C-14,-6 -7,-14 0,-14 Z" fill="url(#strawb-1)"/>
+                                        <path d="M-4,-13 Q0,-18 4,-13 Q8,-17 7,-11 Q0,-14 -4,-13 Z" fill="#2d6a4f"/>
+                                        <circle cx="-3" cy="-5" r="0.7" fill="#ffd166"/>
+                                        <circle cx="3" cy="-3" r="0.7" fill="#ffd166"/>
+                                        <circle cx="0" cy="3" r="0.7" fill="#ffd166"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="slice-floating-tag">
+                                <span class="slice-tag-badge">01</span>
+                                <span class="slice-tag-title">The Sweetest Part 🤤</span>
+                            </div>
+                        </button>
+
+                        <!-- Slice 2: Top-Right -->
+                        <button class="realistic-cake-slice slice-tr" data-chapter="memory-2" id="cake-piece-2" aria-label="Cake Slice 2: Magical Moments">
+                            <div class="slice-svg-box">
+                                <svg class="slice-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="choc-sp-2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#5a2f1b"/>
+                                            <stop offset="100%" stop-color="#3b1c0e"/>
+                                        </linearGradient>
+                                        <linearGradient id="cream-fill-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#ffffff"/>
+                                            <stop offset="100%" stop-color="#fae4d0"/>
+                                        </linearGradient>
+                                        <linearGradient id="ganache-top-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#4a2517"/>
+                                            <stop offset="50%" stop-color="#33180e"/>
+                                            <stop offset="100%" stop-color="#220e06"/>
+                                        </linearGradient>
+                                        <radialGradient id="strawb-2" cx="35%" cy="30%" r="70%">
+                                            <stop offset="0%" stop-color="#ff4d6d"/>
+                                            <stop offset="65%" stop-color="#c9184a"/>
+                                            <stop offset="100%" stop-color="#800f2f"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <ellipse cx="82" cy="142" rx="55" ry="12" fill="rgba(40,15,25,0.3)"/>
+                                    <!-- Flipped Perspective Slice for Right Side -->
+                                    <g transform="translate(160, 0) scale(-1, 1)">
+                                        <polygon points="25,85 80,55 80,125 25,135" fill="url(#choc-sp-2)"/>
+                                        <polygon points="25,118 80,108 80,114 25,124" fill="url(#cream-fill-2)"/>
+                                        <polygon points="25,102 80,92 80,108 25,118" fill="#462415"/>
+                                        <polygon points="25,97 80,87 80,93 25,103" fill="url(#cream-fill-2)"/>
+                                        <polygon points="25,85 80,55 80,87 25,97" fill="url(#choc-sp-2)"/>
+                                        <path d="M80,55 Q115,62 135,80 L135,130 Q115,145 80,125 Z" fill="url(#ganache-top-2)"/>
+                                        <path d="M80,55 Q95,68 100,75 Q105,75 110,65 Q120,78 125,78 Q130,78 135,80 L135,88 Q128,88 122,82 Q115,95 105,95 Q98,95 95,78 Q88,85 80,72 Z" fill="#220e06"/>
+                                        <path d="M80,55 L25,85 Q80,105 135,80 Z" fill="url(#ganache-top-2)"/>
+                                        <path d="M78,58 L33,83 Q78,98 125,80 Q78,72 78,58 Z" fill="rgba(255,255,255,0.12)"/>
+                                        <ellipse cx="80" cy="78" rx="14" ry="9" fill="#ffffff"/>
+                                        <ellipse cx="80" cy="76" rx="11" ry="7" fill="#fdf2e9"/>
+                                        <g transform="translate(80, 68)">
+                                            <path d="M0,-14 C7,-14 12,-6 10,4 C8,10 0,14 -1,14 C-2,14 -10,10 -12,4 C-14,-6 -7,-14 0,-14 Z" fill="url(#strawb-2)"/>
+                                            <path d="M-4,-13 Q0,-18 4,-13 Q8,-17 7,-11 Q0,-14 -4,-13 Z" fill="#2d6a4f"/>
+                                            <circle cx="-3" cy="-5" r="0.7" fill="#ffd166"/>
+                                            <circle cx="3" cy="-3" r="0.7" fill="#ffd166"/>
+                                            <circle cx="0" cy="3" r="0.7" fill="#ffd166"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="slice-floating-tag">
+                                <span class="slice-tag-badge">02</span>
+                                <span class="slice-tag-title">Magical Moments 🎶</span>
+                            </div>
+                        </button>
+
+                        <!-- Slice 3: Bottom-Left -->
+                        <button class="realistic-cake-slice slice-bl" data-chapter="memory-3" id="cake-piece-3" aria-label="Cake Slice 3: Safe Place & Home">
+                            <div class="slice-svg-box">
+                                <svg class="slice-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="78" cy="142" rx="55" ry="12" fill="rgba(40,15,25,0.3)"/>
+                                    <!-- Rich Layered Chocolate Slice -->
+                                    <polygon points="25,85 80,55 80,125 25,135" fill="#5a2f1b"/>
+                                    <polygon points="25,118 80,108 80,114 25,124" fill="#ffffff"/>
+                                    <polygon points="25,102 80,92 80,108 25,118" fill="#462415"/>
+                                    <polygon points="25,97 80,87 80,93 25,103" fill="#ffffff"/>
+                                    <polygon points="25,85 80,55 80,87 25,97" fill="#5a2f1b"/>
+                                    <path d="M80,55 Q115,62 135,80 L135,130 Q115,145 80,125 Z" fill="#33180e"/>
+                                    <path d="M80,55 Q95,68 100,75 Q105,75 110,65 Q120,78 125,78 Q130,78 135,80 L135,88 Q128,88 122,82 Q115,95 105,95 Q98,95 95,78 Q88,85 80,72 Z" fill="#220e06"/>
+                                    <path d="M80,55 L25,85 Q80,105 135,80 Z" fill="#33180e"/>
+                                    <path d="M78,58 L33,83 Q78,98 125,80 Q78,72 78,58 Z" fill="rgba(255,255,255,0.12)"/>
+                                    <ellipse cx="80" cy="78" rx="14" ry="9" fill="#ffffff"/>
+                                    <ellipse cx="80" cy="76" rx="11" ry="7" fill="#fdf2e9"/>
+                                    <g transform="translate(80, 68)">
+                                        <path d="M0,-14 C7,-14 12,-6 10,4 C8,10 0,14 -1,14 C-2,14 -10,10 -12,4 C-14,-6 -7,-14 0,-14 Z" fill="#c9184a"/>
+                                        <path d="M-4,-13 Q0,-18 4,-13 Q8,-17 7,-11 Q0,-14 -4,-13 Z" fill="#2d6a4f"/>
+                                        <circle cx="-3" cy="-5" r="0.7" fill="#ffd166"/>
+                                        <circle cx="3" cy="-3" r="0.7" fill="#ffd166"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="slice-floating-tag">
+                                <span class="slice-tag-badge">03</span>
+                                <span class="slice-tag-title">Safe Place & Home ☕</span>
+                            </div>
+                        </button>
+
+                        <!-- Slice 4: Bottom-Right -->
+                        <button class="realistic-cake-slice slice-br" data-chapter="memory-4" id="cake-piece-4" aria-label="Cake Slice 4: Forever & Ever">
+                            <div class="slice-svg-box">
+                                <svg class="slice-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="82" cy="142" rx="55" ry="12" fill="rgba(40,15,25,0.3)"/>
+                                    <g transform="translate(160, 0) scale(-1, 1)">
+                                        <polygon points="25,85 80,55 80,125 25,135" fill="#5a2f1b"/>
+                                        <polygon points="25,118 80,108 80,114 25,124" fill="#ffffff"/>
+                                        <polygon points="25,102 80,92 80,108 25,118" fill="#462415"/>
+                                        <polygon points="25,97 80,87 80,93 25,103" fill="#ffffff"/>
+                                        <polygon points="25,85 80,55 80,87 25,97" fill="#5a2f1b"/>
+                                        <path d="M80,55 Q115,62 135,80 L135,130 Q115,145 80,125 Z" fill="#33180e"/>
+                                        <path d="M80,55 Q95,68 100,75 Q105,75 110,65 Q120,78 125,78 Q130,78 135,80 L135,88 Q128,88 122,82 Q115,95 105,95 Q98,95 95,78 Q88,85 80,72 Z" fill="#220e06"/>
+                                        <path d="M80,55 L25,85 Q80,105 135,80 Z" fill="#33180e"/>
+                                        <path d="M78,58 L33,83 Q78,98 125,80 Q78,72 78,58 Z" fill="rgba(255,255,255,0.12)"/>
+                                        <ellipse cx="80" cy="78" rx="14" ry="9" fill="#ffffff"/>
+                                        <ellipse cx="80" cy="76" rx="11" ry="7" fill="#fdf2e9"/>
+                                        <g transform="translate(80, 68)">
+                                            <path d="M0,-14 C7,-14 12,-6 10,4 C8,10 0,14 -1,14 C-2,14 -10,10 -12,4 C-14,-6 -7,-14 0,-14 Z" fill="#c9184a"/>
+                                            <path d="M-4,-13 Q0,-18 4,-13 Q8,-17 7,-11 Q0,-14 -4,-13 Z" fill="#2d6a4f"/>
+                                            <circle cx="-3" cy="-5" r="0.7" fill="#ffd166"/>
+                                            <circle cx="3" cy="-3" r="0.7" fill="#ffd166"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="slice-floating-tag">
+                                <span class="slice-tag-badge">04</span>
+                                <span class="slice-tag-title">Forever & Ever 💍</span>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <!-- Bubu & Dudu Hug Love Badge (Revealed after cake cut) -->
+                    <div class="bubu-dudu-hug-badge hidden" id="bubu-dudu-hug">
+                        <img src="assets/both.jpg" alt="Bubu and Dudu Hugging" class="hug-badge-img">
+                        <div class="hug-badge-text">Forever Together ❤️</div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Dudu Character Card -->
+                <div class="character-wrapper dudu-wrapper" id="dudu-character" role="button" tabindex="0" aria-label="Dudu Bear Character - Click to interact">
+                    <div class="character-speech-bubble" id="dudu-bubble">Happy Birthday Jaan! 🎂✨</div>
+                    <div class="character-figure dudu-figure">
+                        <div class="character-img-frame">
+                            <img src="assets/dudu.png" alt="Dudu Bear" class="character-custom-img dudu-img">
+                            <div class="character-party-hat">👑</div>
+                        </div>
+                        <div class="character-name-tag">Dudu 🐻💖</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll Down Prompt (Revealed after cake is clicked) -->
+            <div class="scroll-down-indicator hidden" id="scroll-prompt">
+                <span class="scroll-text">Scroll down to read our love story</span>
+                <div class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </div>
+                <span class="scroll-arrow">↓</span>
+            </div>
+
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SCENE 2: MEMORY 1 (Image Left, Text Right) -->
+        <!-- ============================================== -->
+        <!-- SCENE 2: MEMORY 1 (Image Left, Text Right) -->
+        <!-- ============================================== -->
+        <section id="memory-1" class="scene-section memory-section layout-left" data-chapter="1">
+            <div class="memory-container">
+                
+                <!-- Media Card (Left) -->
+                <div class="memory-media-col">
+                    <div class="memory-card-frame photo-trigger" data-photo="Inages/image1.png" data-caption="You are the sweetest part of my life ❤️">
+                        <div class="polaroid-wrapper">
+                            <img id="memory1-img" class="memory-photo" src="Inages/image1.png" alt="Our Beautiful Memory - 1" loading="lazy">
+                            <div class="photo-overlay-sparkle">✨ Tap to Zoom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Card (Right) -->
+                <div class="memory-text-col">
+                    <div class="memory-content-box">
+                        <div class="chapter-pill">
+                            <span class="pill-dot"></span>
+                            <span class="pill-text">میری جان ❤️</span>
+                        </div>
+                        <h2 class="memory-title" id="memory1-title">[𝘮𝘺 𝘭𝘰𝘷𝘦] ❤️🔥🧸🫂</h2>
+                        <div class="memory-divider">
+                            <span class="divider-line"></span>
+                            <span class="divider-icon">🌸</span>
+                            <span class="divider-line"></span>
+                        </div>
+                        <div class="memory-paragraph-group" id="memory1-text">
+                            <p class="memory-paragraph special-highlight">
+                                𝘺𝘰𝘶 𝘢𝘳𝘦 𝘵𝘩𝘦 𝘴𝘸𝘦𝘵𝘦𝘴𝘵 𝘱𝘢𝘳𝘵 𝘰𝘧 𝘮𝘺 𝘭𝘪𝘧𝘦 𝘫𝘶𝘴𝘵 𝘭𝘪𝘬𝘦 𝘮𝘺 𝘧𝘢𝘷𝘰𝘳𝘪𝘵𝘦 𝘥𝘦𝘴𝘦𝘳𝘵 🤤💘🤌🏻
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘵𝘩𝘦 𝘸𝘢𝘳𝘮𝘵𝘩 𝘐 𝘧𝘦𝘦𝘭 𝘸𝘪𝘵𝘩 𝘺𝘰𝘶 𝘪𝘴 𝘭𝘪𝘬𝘦 𝘩𝘰𝘵 𝘤𝘰𝘧𝘧𝘦𝘦 𝘰𝘯 𝘢 𝘤𝘰𝘭𝘥 𝘯𝘪𝘨𝘩𝘵 ☕💞🫂
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘰𝘯 𝘢 𝘣𝘢𝘥 𝘥𝘢𝘺 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘯𝘰𝘵 𝘫𝘶𝘴𝘵 𝘮𝘺 𝘭𝘰𝘷𝘦, 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘮𝘺 𝘩𝘦𝘢𝘭𝘪𝘯𝘨 𝘮𝘺 𝘱𝘦𝘢𝘤𝘦 𝘢𝘯𝘥 𝘮𝘺 𝘩𝘰𝘮𝘦 🏡❤️🩹
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘦𝘷𝘦𝘳𝘺 𝘮𝘰𝘮𝘦𝘯𝘵 𝘸𝘪𝘵𝘩 𝘺𝘰𝘶 𝘧𝘦𝘭𝘴 𝘭𝘪𝘬𝘦 𝘴𝘩𝘢𝘳𝘪𝘯𝘨 𝘰𝘶𝘳 𝘧𝘢𝘷𝘰𝘳𝘪𝘵𝘦 𝘮𝘦𝘢𝘭 🥂💗, 𝘧𝘶𝘭 𝘰𝘧 𝘭𝘢𝘶𝘨𝘩𝘴, 𝘭𝘰𝘷𝘦, 𝘢𝘯𝘥 𝘦𝘯𝘥𝘭𝘦𝘴 𝘵𝘢𝘭𝘬𝘴
+                            </p>
+                        </div>
+                        
+                        <!-- Romantic Love Reaction -->
+                        <div class="memory-interaction">
+                            <button class="memory-heart-btn" aria-label="Send love to this memory" data-memory="1">
+                                <span class="btn-heart-icon">💖</span>
+                                <span class="btn-heart-label">Cherish this memory</span>
+                                <span class="btn-heart-counter" id="counter-1">1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SCENE 3: MEMORY 2 (Image Right, Text Left) -->
+        <!-- ============================================== -->
+        <section id="memory-2" class="scene-section memory-section layout-right" data-chapter="2">
+            <div class="memory-container">
+                
+                <!-- Media Card (Right on desktop, Top on mobile) -->
+                <div class="memory-media-col">
+                    <div class="memory-card-frame photo-trigger" data-photo="Inages/image2.png" data-caption="You are my King & Queen, my forever dream 👑❤️">
+                        <div class="polaroid-wrapper">
+                            <img id="memory2-img" class="memory-photo" src="Inages/image2.png" alt="Our Beautiful Memory - 2" loading="lazy">
+                            <div class="photo-overlay-sparkle">✨ Tap to Zoom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Card (Left on desktop, Bottom on mobile) -->
+                <div class="memory-text-col">
+                    <div class="memory-content-box">
+                        <div class="chapter-pill">
+                            <span class="pill-dot"></span>
+                            <span class="pill-text">ہماری محبت ✨</span>
+                        </div>
+                        <h2 class="memory-title" id="memory2-title">Magical Calls & Heartbeat 🎶</h2>
+                        <div class="memory-divider">
+                            <span class="divider-line"></span>
+                            <span class="divider-icon">✨</span>
+                            <span class="divider-line"></span>
+                        </div>
+                        <div class="memory-paragraph-group" id="memory2-text">
+                            <p class="memory-paragraph">
+                                𝘧𝘳𝘰𝘮 𝘴𝘸𝘦𝘦𝘵 𝘯𝘰𝘵𝘦𝘴 𝘵𝘰 𝘭𝘢𝘵𝘦 𝘯𝘪𝘨𝘩𝘵 𝘤𝘢𝘭𝘭𝘴 📞💗 𝘦𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘣𝘦𝘤𝘰𝘮𝘦𝘴 𝘮𝘢𝘨𝘪𝘤𝘢𝘭 𝘣𝘦𝘤𝘢𝘶𝘴𝘦 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘸𝘪𝘵𝘩 𝘮𝘦
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘺𝘰𝘶 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘢𝘯𝘥 𝘮𝘦 𝘭𝘪𝘬𝘦 𝘯𝘰 𝘰𝘯𝘦 𝘦𝘭𝘴𝘦 , 𝘫𝘶𝘴𝘵 𝘭𝘪𝘬𝘦 𝘩𝘰𝘸 𝘮𝘺 𝘩𝘦𝘢𝘳𝘵 𝘶𝘯𝘥𝘦𝘳𝘴𝘵𝘢𝘯𝘥𝘴 𝘺𝘰𝘶𝘳𝘴 🥹🫶🏻💗
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘺𝘰𝘶𝘳 𝘱𝘳𝘦𝘴𝘦𝘯𝘤𝘦 𝘪𝘴 𝘭𝘪𝘬𝘦 𝘮𝘺 𝘧𝘢𝘷𝘰𝘳𝘪𝘵𝘦 𝘴𝘰𝘯𝘨 𝘰𝘯 𝘳𝘦𝘱𝘦𝘢𝘵 🎶❤️🔥 𝘣𝘳𝘪𝘯𝘨𝘪𝘯𝘨 𝘪𝘯𝘴𝘵𝘢𝘯𝘵 𝘴𝘮𝘪𝘭𝘦𝘴 𝘢𝘯𝘥 𝘤𝘢𝘭𝘮
+                            </p>
+                            <div class="urdu-quote-card">
+                                <p class="urdu-quote-text" dir="rtl">
+                                    "مــیــں خــدا کـی شـکـر گـزار ہـوں 🥺🤲، جـس نـے مـجـھـے آپ جـیـسا انـمول خـزانہ بــخــشــا 💍❤️"
+                                </p>
+                                <p class="urdu-quote-sub">🕊️ You are the reason of my smile, the beat of my heart, and my forever dream 💫🫂</p>
+                            </div>
+                        </div>
+
+                        <!-- Romantic Love Reaction -->
+                        <div class="memory-interaction">
+                            <button class="memory-heart-btn" aria-label="Send love to this memory" data-memory="2">
+                                <span class="btn-heart-icon">💖</span>
+                                <span class="btn-heart-label">Cherish this memory</span>
+                                <span class="btn-heart-counter" id="counter-2">1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SCENE 4: MEMORY 3 (Image Left, Text Right) -->
+        <!-- ============================================== -->
+        <section id="memory-3" class="scene-section memory-section layout-left" data-chapter="3">
+            <div class="memory-container">
+                
+                <!-- Media Card (Left) -->
+                <div class="memory-media-col">
+                    <div class="memory-card-frame photo-trigger" data-photo="Inages/image3.png" data-caption="Sharing every joy, holding hands forever 🤝💞">
+                        <div class="polaroid-wrapper">
+                            <img id="memory3-img" class="memory-photo" src="Inages/image3.png" alt="Our Beautiful Memory - 3" loading="lazy">
+                            <div class="photo-overlay-sparkle">✨ Tap to Zoom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Card (Right) -->
+                <div class="memory-text-col">
+                    <div class="memory-content-box">
+                        <div class="chapter-pill">
+                            <span class="pill-dot"></span>
+                            <span class="pill-text">دل کا سکون ☕</span>
+                        </div>
+                        <h2 class="memory-title" id="memory3-title">Flavor To My Life & Soul 🫂</h2>
+                        <div class="memory-divider">
+                            <span class="divider-line"></span>
+                            <span class="divider-icon">☕</span>
+                            <span class="divider-line"></span>
+                        </div>
+                        <div class="memory-paragraph-group" id="memory3-text">
+                            <p class="memory-paragraph">
+                                𝘐 𝘤𝘩𝘦𝘳𝘪𝘴𝘩 𝘦𝘷𝘦𝘳𝘺 𝘮𝘦𝘮𝘰𝘳𝘺 𝘸𝘦 𝘤𝘳𝘦𝘢𝘵𝘦 , 𝘧𝘳𝘰𝘮 𝘴𝘩𝘢𝘳𝘪𝘯𝘨 𝘧𝘰𝘥 🍽️ 𝘵𝘰 𝘴𝘩𝘢𝘳𝘪𝘯𝘨 𝘥𝘳𝘦𝘢𝘮𝘴 𝘰𝘧 𝘰𝘶𝘳 𝘧𝘶𝘵𝘶𝘳𝘦
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘴𝘪𝘵𝘪𝘯𝘨 𝘸𝘪𝘵𝘩 𝘺𝘰𝘶, 𝘭𝘢𝘶𝘨𝘩𝘪𝘯𝘨, 𝘭𝘰𝘷𝘪𝘯𝘨, 𝘸𝘩𝘪𝘭𝘦 𝘩𝘰𝘭𝘥𝘪𝘯𝘨 𝘩𝘢𝘯𝘥𝘴 🤝💞 𝘵𝘩𝘰𝘴𝘦 𝘢𝘳𝘦 𝘵𝘩𝘦 𝘮𝘰𝘮𝘦𝘯𝘵𝘴 𝘐 𝘵𝘳𝘦𝘢𝘴𝘶𝘳𝘦 𝘵𝘩𝘦 𝘮𝘰𝘴𝘵
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘴𝘰𝘮𝘦𝘵𝘪𝘮𝘦𝘴 𝘐 𝘵𝘩𝘪𝘯𝘬 𝘭𝘪𝘧𝘦 𝘸𝘪𝘵𝘩𝘰𝘶𝘵 𝘺𝘰𝘶 𝘸𝘰𝘶𝘭𝘥 𝘣𝘦 𝘭𝘪𝘬𝘦 𝘤𝘰𝘧𝘦 𝘸𝘪𝘵𝘩𝘰𝘶𝘵 𝘴𝘶𝘨𝘢𝘳 ☕🥺 𝘣𝘭𝘢𝘯𝘥 𝘢𝘯𝘥 𝘦𝘮𝘱𝘵𝘺
+                            </p>
+                            <p class="memory-paragraph special-highlight">
+                                𝘺𝘰𝘶 𝘢𝘥𝘥 𝘧𝘭𝘢𝘷𝘰𝘳 𝘵𝘰 𝘮𝘺 𝘭𝘪𝘧𝘦 🫂💗, 𝘴𝘸𝘦𝘵𝘯𝘦𝘴𝘴 𝘵𝘰 𝘮𝘺 𝘥𝘢𝘺𝘴 , 𝘢𝘯𝘥 𝘭𝘰𝘷𝘦 𝘵𝘰 𝘮𝘺 𝘴𝘰𝘶𝘭
+                            </p>
+                            <div class="urdu-quote-card">
+                                <p class="urdu-quote-text" dir="rtl">
+                                    "🌹 اللہ آپ کو ہر بری نظر سے بچائے، 🤲✨ آپ کی زندگی کو خوشیوں، کامیابیوں، محبت اور سکون سے بھر دے 🌸🫂 🌹"
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Romantic Love Reaction -->
+                        <div class="memory-interaction">
+                            <button class="memory-heart-btn" aria-label="Send love to this memory" data-memory="3">
+                                <span class="btn-heart-icon">💖</span>
+                                <span class="btn-heart-label">Cherish this memory</span>
+                                <span class="btn-heart-counter" id="counter-3">1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SCENE 5: MEMORY 4 (Image Right, Text Left) -->
+        <!-- ============================================== -->
+        <section id="memory-4" class="scene-section memory-section layout-right" data-chapter="4">
+            <div class="memory-container">
+                
+                <!-- Media Card (Right on desktop, Top on mobile) -->
+                <div class="memory-media-col">
+                    <div class="memory-card-frame photo-trigger" data-photo="Inages/Image4.png" data-caption="I'm yours, and you're mine. Forever & Ever 🌍🥹">
+                        <div class="polaroid-wrapper">
+                            <img id="memory4-img" class="memory-photo" src="Inages/Image4.png" alt="Our Beautiful Memory - 4" loading="lazy">
+                            <div class="photo-overlay-sparkle">✨ Tap to Zoom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Card (Left on desktop, Bottom on mobile) -->
+                <div class="memory-text-col">
+                    <div class="memory-content-box">
+                        <div class="chapter-pill">
+                            <span class="pill-dot"></span>
+                            <span class="pill-text">ہمیشہ کا ساتھ 🔒</span>
+                        </div>
+                        <h2 class="memory-title" id="memory4-title">My Safe Place & Forever Home 🏡</h2>
+                        <div class="memory-divider">
+                            <span class="divider-line"></span>
+                            <span class="divider-icon">🤍</span>
+                            <span class="divider-line"></span>
+                        </div>
+                        <div class="memory-paragraph-group" id="memory4-text">
+                            <p class="memory-paragraph">
+                                𝘯𝘰 𝘮𝘢𝘵𝘦𝘳 𝘸𝘩𝘢𝘵 𝘩𝘢𝘱𝘱𝘦𝘯𝘴, 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘮𝘺 𝘴𝘢𝘧𝘦 𝘱𝘭𝘢𝘤𝘦 🤍, 𝘮𝘺 𝘩𝘢𝘱𝘱𝘪𝘯𝘦𝘴𝘴 🥹💘, 𝘢𝘯𝘥 𝘮𝘺 𝘧𝘰𝘳𝘦𝘷𝘦𝘳
+                            </p>
+                            <p class="memory-paragraph">
+                                𝘐 𝘱𝘳𝘰𝘮𝘪𝘴𝘦 𝘵𝘰 𝘢𝘭𝘸𝘢𝘺𝘴 𝘣𝘦 𝘵𝘩𝘦𝘳𝘦 𝘧𝘰𝘳 𝘺𝘰𝘶 , 𝘵𝘰 𝘴𝘩𝘢𝘳𝘦 𝘦𝘷𝘦𝘳𝘺 𝘫𝘰𝘺 , 𝘦𝘷𝘦𝘳𝘺 𝘵𝘦𝘢𝘳 😔💗🫂, 𝘢𝘯𝘥 𝘦𝘷𝘦𝘳𝘺 𝘥𝘢𝘺
+                            </p>
+                            <p class="memory-paragraph special-highlight">
+                                𝘯𝘰 𝘮𝘢𝘵𝘵𝘦𝘳 𝘸𝘩𝘦𝘳𝘦 𝘭𝘪𝘧𝘦 𝘵𝘢𝘬𝘦𝘴 𝘶𝘴 , 𝘺𝘰𝘶 𝘸𝘪𝘭 𝘢𝘭𝘸𝘢𝘺𝘴 𝘣𝘦 𝘮𝘺 𝘩𝘰𝘮𝘦 ❤️🔥🏡
+                            </p>
+                            <div class="urdu-quote-card">
+                                <p class="urdu-quote-text" dir="rtl">
+                                    "👩🏻❤️💋👨🏻 ɪ’𝐦 𝐲𝐨𝐮𝐫𝐬 ✨, ᴀɴᴅ ʏᴏᴜ’ʀᴇ 𝐌𝐢𝐧𝐞 💞🔐 𝐅𝐨𝐫𝐞𝐯𝐞𝐫 & 𝐄𝐯𝐞𝐫 🌍🥹"
+                                </p>
+                                <p class="urdu-quote-sub">
+                                    🥺🤍 "Ap meri zindagi ka wo hissa ho jo sabse khoobsurat hai, Ap meri duaon ka wo hissa ho jo kabhi khatam nahi hota, Aur ap meri duniya ka wo roshni ho jo andheron ko mita deti hai 🌸✨"
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Romantic Love Reaction -->
+                        <div class="memory-interaction">
+                            <button class="memory-heart-btn" aria-label="Send love to this memory" data-memory="4">
+                                <span class="btn-heart-icon">💖</span>
+                                <span class="btn-heart-label">Cherish this memory</span>
+                                <span class="btn-heart-counter" id="counter-4">1</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SPECIAL INTERACTIVE SECTION: MY EVERYTHING -->
+        <!-- ============================================== -->
+        <section id="my-everything" class="scene-section nicknames-section">
+            <div class="nicknames-container">
+                
+                <header class="section-header">
+                    <div class="header-badge">❤️ 25 Reasons You Are My World ❤️</div>
+                    <h2 class="section-title">🌎♥️ 𝙈𝙔 𝙀𝙫𝙚𝙧𝙮𝙩𝙝𝙞𝙣𝙜 ♥️🌎</h2>
+                    <p class="section-desc">Tap any romantic title below to shower extra love & sparkles! ✨</p>
+                    <div class="love-meter-bar-wrap">
+                        <div class="love-meter-label">
+                            <span>Love Level for My Wife</span>
+                            <span class="love-meter-val">Infinity ♾️%</span>
+                        </div>
+                        <div class="love-meter-track">
+                            <div class="love-meter-fill"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Interactive Cloud of 25 Nicknames / Romantic Titles -->
+                <div class="nickname-grid" id="nickname-cloud">
+                    <!-- 1 -->
+                    <button class="nickname-pill" data-title="ᴍᴀʀɪ ᴊᴀᴡɴ" data-emoji="😩💋">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴀʀɪ ᴊᴀᴡɴ</span>
+                        <span class="pill-tail">♥︎ 😩💋</span>
+                    </button>
+                    <!-- 2 -->
+                    <button class="nickname-pill" data-title="ᴍᴀʀɪ 𝙨ʜᴇʜᴢᴀᴅɪɪɪɪ" data-emoji="💗👑">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴀʀɪ 𝙨ʜᴇʜᴢᴀᴅɪɪɪɪ</span>
+                        <span class="pill-tail">♥︎ 💗</span>
+                    </button>
+                    <!-- 3 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴇ ᴅɪʟ ᴋᴀ 𝙨ᴜᴋᴏᴏɴ" data-emoji="♥️🕊️">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴇ ᴅɪʟ ᴋᴀ 𝙨ᴜᴋᴏᴏɴ</span>
+                        <span class="pill-tail">♥︎ ♥️</span>
+                    </button>
+                    <!-- 4 -->
+                    <button class="nickname-pill" data-title="ᴍᴀʀɪ ᴋᴜʟ ᴋᴀɪɴᴀᴀᴛ" data-emoji="🥹🌸">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴀʀɪ ᴋᴜʟ ᴋᴀɪɴᴀᴀᴛ</span>
+                        <span class="pill-tail">♥︎ 🥹🌸</span>
+                    </button>
+                    <!-- 5 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴇ ᴊᴇᴇɴᴇ ᴋɪ ᴡᴀᴊᴀʜ" data-emoji="😩💋">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴇ ᴊᴇᴇɴᴇ ᴋɪ ᴡᴀᴊᴀʜ</span>
+                        <span class="pill-tail">♥︎ 😩💋</span>
+                    </button>
+                    <!-- 6 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴢɪɴᴅᴀɢɪ" data-emoji="🕊️♥️">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴢɪɴᴅᴀɢɪ</span>
+                        <span class="pill-tail">♥︎ 🕊️♥️</span>
+                    </button>
+                    <!-- 7 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴅʜᴀʀᴋᴀɴ" data-emoji="🥹💗">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴅʜᴀʀᴋᴀɴ</span>
+                        <span class="pill-tail">♥︎ 🥹💗</span>
+                    </button>
+                    <!-- 8 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ʀᴏᴏʜ ᴋᴀ 𝙨ᴜᴋᴏᴏɴ" data-emoji="🦋✨">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ʀᴏᴏʜ ᴋᴀ 𝙨ᴜᴋᴏᴏɴ</span>
+                        <span class="pill-tail">♥︎ 🦋</span>
+                    </button>
+                    <!-- 9 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴀᴀʀᴢᴏᴏ" data-emoji="🌸💋">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴀᴀʀᴢᴏᴏ</span>
+                        <span class="pill-tail">♥︎ 🌸💋</span>
+                    </button>
+                    <!-- 10 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴇ ᴋʜᴡᴀʙᴏɴ ᴋɪ ᴅᴜɴɪʏᴀ" data-emoji="🥹💫">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴇ ᴋʜᴡᴀʙᴏɴ ᴋɪ ᴅᴜɴɪʏᴀ</span>
+                        <span class="pill-tail">♥︎ 🥹</span>
+                    </button>
+                    <!-- 11 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴅɪʟʀᴜʙᴀ" data-emoji="😩❤️">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴅɪʟʀᴜʙᴀ</span>
+                        <span class="pill-tail">♥︎ 😩❤️</span>
+                    </button>
+                    <!-- 12 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴊᴀɴ ᴇ ᴊᴀᴀɴ" data-emoji="💋🔥">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴊᴀɴ ᴇ ᴊᴀᴀɴ</span>
+                        <span class="pill-tail">♥︎ 💋</span>
+                    </button>
+                    <!-- 13 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴋʜᴜ𝙨ʜɪ" data-emoji="💗🥰">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴋʜᴜ𝙨ʜɪ</span>
+                        <span class="pill-tail">♥︎ 💗</span>
+                    </button>
+                    <!-- 14 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴀ ᴘʜᴇʟᴀ ᴏʀ ᴀᴀᴋʜʀɪ ɪ𝙨ʜᴏ̨" data-emoji="🥹💍">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴀ ᴘʜᴇʟᴀ ᴏʀ ᴀᴀᴋʜʀɪ ɪ𝙨ʜᴏ̨</span>
+                        <span class="pill-tail">♥︎ 🥹</span>
+                    </button>
+                    <!-- 15 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴘᴜʀɪ ᴋᴀʏɴᴀᴀᴛ" data-emoji="🕊️🌸">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴘᴜʀɪ ᴋᴀʏɴᴀᴀᴛ</span>
+                        <span class="pill-tail">♥︎ 🕊️🌸</span>
+                    </button>
+                    <!-- 16 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴇ ᴅɪʟ ᴋɪ ʀᴀɴɪ" data-emoji="💗👑">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴇ ᴅɪʟ ᴋɪ ʀᴀɴɪ</span>
+                        <span class="pill-tail">♥︎ 💗</span>
+                    </button>
+                    <!-- 17 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴍᴏʜᴀʙʙᴀᴛ" data-emoji="😩❤️">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴍᴏʜᴀʙʙᴀᴛ</span>
+                        <span class="pill-tail">♥︎ 😩❤️</span>
+                    </button>
+                    <!-- 18 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ʜᴀʀ ᴋʜᴜ𝙨ʜɪ ᴋᴀ ʀᴀᴀᴢ" data-emoji="🥹✨">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ʜᴀʀ ᴋʜᴜ𝙨ʜɪ ᴋᴀ ʀᴀᴀᴢ</span>
+                        <span class="pill-tail">♥︎ 🥹</span>
+                    </button>
+                    <!-- 19 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ʜᴀʀ ᴅᴜᴀ ᴋᴀ ᴍᴀᴛʟᴀʙ" data-emoji="🕊️🤲">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ʜᴀʀ ᴅᴜᴀ ᴋᴀ ᴍᴀᴛʟᴀʙ</span>
+                        <span class="pill-tail">♥︎ 🕊️</span>
+                    </button>
+                    <!-- 20 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ɴᴀᴢʀᴏɴ ᴋɪ ᴋʜᴜʙ𝙨ᴜʀᴀᴛɪ" data-emoji="💋🌸">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ɴᴀᴢʀᴏɴ ᴋɪ ᴋʜᴜʙ𝙨ᴜʀᴀᴛɪ</span>
+                        <span class="pill-tail">♥︎ 💋🌸</span>
+                    </button>
+                    <!-- 21 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ʜᴀʏᴀᴀᴛ" data-emoji="🥹💗">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ʜᴀʏᴀᴀᴛ</span>
+                        <span class="pill-tail">♥︎ 🥹💗</span>
+                    </button>
+                    <!-- 22 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴀ ʙᴇ𝙨ᴀʙʀ ɪ𝙨ʜᴏ̨" data-emoji="😩❤️">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴀ ʙᴇ𝙨ᴀʙʀ ɪ𝙨ʜᴏ̨</span>
+                        <span class="pill-tail">♥︎ 😩❤️</span>
+                    </button>
+                    <!-- 23 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ʜᴀʀ 𝙨ᴀᴀɴ𝘴 ᴋɪ ᴢᴀʀᴏᴏʀᴀᴛ" data-emoji="🦋🫀">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ʜᴀʀ 𝙨ᴀᴀɴ𝘴 ᴋɪ ᴢᴀʀᴏᴏʀᴀᴛ</span>
+                        <span class="pill-tail">♥︎ 🦋</span>
+                    </button>
+                    <!-- 24 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀᴀ 𝙨ᴀʙ 𝙨ᴇ ᴋʜᴜʙ𝙨ᴜʀᴀᴛ ᴋʜᴡᴀʙ" data-emoji="💗🌙">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀᴀ 𝙨ᴀʙ 𝙨ᴇ ᴋʜᴜʙ𝙨ᴜʀᴀᴛ ᴋʜᴡᴀʙ</span>
+                        <span class="pill-tail">♥︎ 💗</span>
+                    </button>
+                    <!-- 25 -->
+                    <button class="nickname-pill" data-title="ᴍᴇʀɪ ᴅᴜɴɪʏᴀ ᴋᴀ 𝙨ᴀʙ 𝙨ᴇ ᴘʏᴀʀᴀ ʜɪ𝙨𝙨ᴀ" data-emoji="🕊️🌍">
+                        <span class="pill-heart">♡</span>
+                        <span class="pill-name">ᴍᴇʀɪ ᴅᴜɴɪʏᴀ ᴋᴀ 𝙨ᴀʙ 𝙨ᴇ ᴘʏᴀʀᴀ ʜɪ𝙨𝙨ᴀ</span>
+                        <span class="pill-tail">♥︎ 🕊️</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SPECIAL SECTION: URDU POETRY & SHAYARI SANCTUARY -->
+        <!-- ============================================== -->
+        <section id="poetry-sanctuary" class="scene-section poetry-section">
+            <div class="poetry-container">
+                
+                <div class="royal-urdu-card">
+                    <div class="card-corner corner-tl">🌸</div>
+                    <div class="card-corner corner-tr">🌸</div>
+                    <div class="card-corner corner-bl">🌸</div>
+                    <div class="card-corner corner-br">🌸</div>
+
+                    <div class="card-seal-icon">
+                        <img src="assets/both.jpg" alt="Bubu & Dudu Love" class="poetry-seal-img">
+                    </div>
+
+                    <h2 class="poetry-heading-urdu" dir="rtl">خوبصورت شاعری اور دعائیں برائے جاناں ❤️</h2>
+                    
+                    <div class="urdu-couplets-list" dir="rtl">
+                        <div class="couplet-item">
+                            <p class="couplet-line">آپ سـلامـت رہـیـں ہـزاروں بـرس ❤🩹🌼</p>
+                            <p class="couplet-line">ہـر بـرس کـے دن ہـوں پـچـاس ہـزار 🫶🏻🌸</p>
+                        </div>
+                        
+                        <div class="couplet-divider">✦••┈┈┈┈••✦</div>
+
+                        <div class="couplet-item poem-verse">
+                            <p class="couplet-line">سورج روشنی لے کر آیا ☀️🫶🏻</p>
+                            <p class="couplet-line">چڑیوں نے گانا گایا 🐦🌺</p>
+                            <p class="couplet-line">پھولوں نے ہنس کر کہا 🫂🌼</p>
+                            <p class="couplet-line highlight-verse">مبارک ہو میری بیوی کا birthday آیا 🎂💗</p>
+                        </div>
+
+                        <div class="couplet-divider">✦••┈┈┈┈••✦</div>
+
+                        <div class="couplet-item">
+                            <p class="couplet-prose">
+                                🌹 "Apki muskaan meri jaan hai…<br>
+                                Apka saaya meri dua hai…<br>
+                                aur apka hona meri dunya ka sabse khoobsurat tohfa hai 💕🫂" 🌹
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="poetry-footer-badge">
+                        <span>⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ 🦢💫 Har saal apki life aur bhi roshan ho, In sha Allah ❤️ 💎✨</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SPECIAL SECTION: WAX-SEALED LOVE LETTER -->
+        <!-- ============================================== -->
+        <section id="love-letter-section" class="scene-section letter-section">
+            <div class="letter-container">
+                
+                <header class="section-header">
+                    <div class="header-badge">💌 A Secret Message Just For You 💌</div>
+                    <h2 class="section-title">Open My Birthday Letter To You 💖</h2>
+                    <p class="section-desc">Tap the wax seal below to unfold my heart's deepest words.</p>
+                </header>
+
+                <!-- Interactive 3D Envelope -->
+                <div class="envelope-wrapper" id="envelope-wrapper">
+                    
+                    <!-- Closed Envelope Face -->
+                    <div class="envelope-card" id="envelope-card" role="button" tabindex="0" aria-label="Tap to open birthday love letter">
+                        <div class="envelope-flap" id="envelope-flap"></div>
+                        <div class="wax-seal" id="wax-seal">
+                            <span class="seal-icon">❤️</span>
+                            <span class="seal-text">OPEN</span>
+                        </div>
+                        <div class="envelope-front-text">
+                            <p class="envelope-to">To: Meri Pyari Begum / Wifey 👸🏻💍</p>
+                            <p class="envelope-from">From: Tumhara Shohar, Tumhara Hamesha ❤️</p>
+                        </div>
+                    </div>
+
+                    <!-- Unfolded Romantic Letter -->
+                    <article class="letter-sheet hidden" id="letter-sheet">
+                        <div class="letter-header">
+                            <span class="letter-stamp">🎂 12:00 AM</span>
+                            <h3 class="letter-title">Happy Birthday to the most amazing wife I know... ❤️🔗🌼🫀💫</h3>
+                        </div>
+                        <div class="letter-body">
+                            <p>
+                                <em>"I may not say it every day but you are my everything"</em> 🥺🌸🫂 I promise that I will always try to make you smile 🤭💗😁✨🫶🏻 you are not only my wife but also my best friend 💗🌼✨🌺🫀
+                            </p>
+                            <p>
+                                <em>Words can't explain how much I love and adore you</em> 🥲🌸😌🤭✨🫀 on your birthday I pray 🩷🤲🏻 May Allah bless you with happiness, love 🌺🫶🏻🫀🌸💗 good health nd success in every step of your life ❤️🌼🫶🏻🌙
+                            </p>
+                            <p>
+                                <em>_may you have all the joy your heart can hold_</em> ✨🤌🏻🌼❤🩹💗 <strong>`I am so blessed to have you as my wife 🤲🏻💗✨🫀🌼`</strong> I may not be perfect but I will always choose you 🤭😁🫂🫶🏻 I don't know if I can finish this because words really can't explain my feelings 🌚🌸❤🩹
+                            </p>
+                            <div class="letter-urdu-block">
+                                <p dir="rtl">
+                                    🌸🦋 Mere liye ap sirf ek insan nahi ho, Ap meri khushi ka sabab ho, mera comfort zone ho, meri duaon ki roshni ho 💎🤲.
+                                </p>
+                                <p dir="rtl">
+                                    🎂💞 𝓐𝓵𝓵𝓪𝓱 𝓽𝓾𝓶𝓱𝓮 𝓼𝓮𝓱𝓪𝓽, 𝓼𝓾𝓴𝓸𝓸𝓷 𝓸𝓻 𝓴𝓪𝓶𝔂𝓪𝓫𝓲 𝓼𝓮 𝓷𝓪𝔀𝓪𝔃𝓮 🦋🌷
+                                </p>
+                            </div>
+                        </div>
+                        <div class="letter-signature">
+                            <p class="sig-note">Always & Forever In Love,</p>
+                            <p class="sig-name">Tumhara Apna ❤️🔥🫂</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- SCENE 6: FINAL SUNSET & LIFETIME PROMISE -->
+        <!-- ============================================== -->
+        <section id="final-scene" class="scene-section final-section">
+            
+            <!-- Sunset Sky Backdrop -->
+            <div class="sunset-backdrop" aria-hidden="true">
+                <div class="sunset-sun">
+                    <div class="sun-halo"></div>
+                    <div class="sun-orb"></div>
+                </div>
+                <div class="sunset-cloud cloud-1"></div>
+                <div class="sunset-cloud cloud-2"></div>
+                <div class="sunset-hills hill-back"></div>
+                <div class="sunset-hills hill-front"></div>
+                <div class="sunset-path"></div>
+            </div>
+
+            <!-- Couple Walking Hand-in-Hand into Sunset -->
+            <div class="sunset-stage">
+                <div class="walking-couple-container" id="walking-couple" aria-label="Bubu and Dudu walking together towards the sunset">
+                    
+                    <!-- Walking Animated Couple SVG + Photo Badge -->
+                    <div class="bubu-dudu-sunset-pair">
+                        <img src="assets/both.jpg" alt="Bubu and Dudu walking into sunset" class="sunset-couple-img">
+                        <div class="sunset-heart-pulse">💖</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Romantic Final Message Card -->
+            <div class="final-card-wrapper">
+                <div class="final-message-card">
+                    
+                    <div class="final-card-sparkle">✨ 💖 🌸 💖 ✨</div>
+
+                    <h2 class="final-title" id="final-title-text">Love You Baby 😚💋</h2>
+
+                    <div class="final-message-divider">
+                        <span class="f-line"></span>
+                        <span class="f-heart">🌹</span>
+                        <span class="f-line"></span>
+                    </div>
+
+                    <div class="final-body-box">
+                        <div class="lifetime-urdu-dedication" dir="rtl">
+                            <p class="lifetime-urdu-tag">- Me tO my favOriTe PersOn,, 🥹♥️"</p>
+                            <p class="lifetime-urdu-text">
+                                "آپ میـــری زنـــدگـــی کـــا بـــڑا قیمتـــی اثـــاثـــہ ہـــو ، آپ کو میـــں اپنـــی عمـــر کـــے آخـــری حصـــے تـــک ســـاتـــھ لـــے کـــر چلـــوں گـــا، جـــانـــاں 🥰🫶🌸✨💗 ،،"
+                            </p>
+                        </div>
+
+                        <p class="final-body-text" id="final-message-text">
+                            Thank you for being the sweetest part of my life.<br>
+                            May this year bring you boundless smiles, peace, and endless love.<br>
+                            You are my today, my tomorrow, and my forever home. 🏡❤️
+                        </p>
+                    </div>
+
+                    <p class="final-signature-text" id="final-signature-display">Forever & Ever Yours ❤️</p>
+
+                    <!-- Interactive Ending Button: Make a Wish -->
+                    <div class="wish-button-box">
+                        <button class="wish-btn" id="make-wish-btn" aria-label="Make a special birthday wish">
+                            <span class="wish-btn-icon">✨</span>
+                            <span class="wish-btn-text">Make a Birthday Wish</span>
+                            <span class="wish-btn-icon">🌠</span>
+                        </button>
+                        <p class="wish-toast hidden" id="wish-toast">May all your sweetest prayers and dreams come true tonight! 💖🤲</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Floating Back to Top Button -->
+            <div class="back-to-top-box">
+                <button class="back-top-btn" id="back-to-top-btn" aria-label="Replay love story from beginning">
+                    <span class="back-arrow">↑</span> Replay Our Love Story <span class="back-heart">🎂</span>
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL FOR FULL SCREEN PHOTO VIEW -->
+    <div id="photo-lightbox" class="photo-lightbox hidden" role="dialog" aria-modal="true" aria-label="Photo Fullscreen View">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-card">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close photo preview">✕</button>
+            <div class="lightbox-img-wrap">
+                <img id="lightbox-img" src="" alt="Photo Full View" class="lightbox-img">
+            </div>
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Glow Element for Desktop -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
